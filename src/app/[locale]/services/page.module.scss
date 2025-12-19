@@ -1,0 +1,96 @@
+@import '@/styles/variables';
+@import '@/styles/mixins';
+
+.servicesPage {
+  min-height: 100vh;
+}
+
+.hero {
+  @include section-padding;
+  background: linear-gradient(135deg, $black 0%, #1a1a1a 50%, $black 100%);
+  color: $white;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 183, 216, 0.2);
+}
+
+.container {
+  @include container;
+}
+
+.title {
+  @include heading-1;
+  color: $white;
+  margin-bottom: $spacing-lg;
+}
+
+.description {
+  @include body-text;
+  font-size: $font-size-lg;
+  color: $white;
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.servicesList {
+  @include section-padding;
+  background-color: $bg-secondary;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-2xl;
+
+  @include respond-to(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.serviceCard {
+  @include card;
+  padding: $spacing-2xl;
+}
+
+.icon {
+  @include flex-center;
+  width: 80px;
+  height: 80px;
+  margin-bottom: $spacing-lg;
+  background: linear-gradient(135deg, $primary-light 0%, $primary-color 50%, $primary-dark 100%);
+  color: $white;
+  border-radius: $radius-full;
+  padding: $spacing-lg;
+}
+
+.serviceTitle {
+  @include heading-3;
+  margin-bottom: $spacing-md;
+}
+
+.serviceDescription {
+  @include body-text;
+  margin-bottom: $spacing-lg;
+}
+
+.featuresList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature {
+  @include body-text;
+  padding-left: $spacing-lg;
+  position: relative;
+  margin-bottom: $spacing-sm;
+
+  &::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: $primary-color;
+    font-weight: $font-weight-bold;
+  }
+}
+

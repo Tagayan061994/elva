@@ -1,0 +1,117 @@
+@import '@/styles/variables';
+@import '@/styles/mixins';
+
+.worksPage {
+  min-height: 100vh;
+}
+
+.hero {
+  @include section-padding;
+  background: linear-gradient(135deg, $black 0%, #1a1a1a 50%, $black 100%);
+  color: $white;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 183, 216, 0.2);
+}
+
+.container {
+  @include container;
+}
+
+.title {
+  @include heading-1;
+  color: $white;
+  margin-bottom: $spacing-sm;
+}
+
+.subtitle {
+  @include heading-3;
+  color: $white;
+  opacity: 0.95;
+  margin-bottom: $spacing-lg;
+}
+
+.description {
+  @include body-text;
+  font-size: $font-size-lg;
+  color: $white;
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cases {
+  @include section-padding;
+  background-color: $bg-secondary;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-xl;
+
+  @include respond-to(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond-to(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.caseCard {
+  @include card;
+  padding: 0;
+  overflow: hidden;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(135deg, $gray-200 0%, $gray-300 100%);
+  @include flex-center;
+  color: $text-light;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-medium;
+}
+
+.content {
+  padding: $spacing-xl;
+}
+
+.caseTitle {
+  @include heading-4;
+  margin-bottom: $spacing-sm;
+}
+
+.procedure {
+  @include body-text;
+  margin-bottom: $spacing-md;
+}
+
+.meta {
+  @include flex-between;
+  padding-top: $spacing-md;
+  border-top: 1px solid $gray-200;
+}
+
+.price,
+.time {
+  @include text-small;
+  font-weight: $font-weight-medium;
+  background: linear-gradient(135deg, $primary-light 0%, $primary-color 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.emptyState {
+  text-align: center;
+  padding: $spacing-4xl 0;
+
+  p {
+    @include body-text;
+    font-size: $font-size-lg;
+    color: $text-light;
+  }
+}
+

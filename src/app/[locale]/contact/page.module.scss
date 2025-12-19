@@ -1,0 +1,144 @@
+@import '@/styles/variables';
+@import '@/styles/mixins';
+
+.contactPage {
+  min-height: 100vh;
+}
+
+.hero {
+  @include section-padding;
+  background: linear-gradient(135deg, $black 0%, #1a1a1a 50%, $black 100%);
+  color: $white;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 183, 216, 0.2);
+}
+
+.container {
+  @include container;
+}
+
+.title {
+  @include heading-1;
+  color: $white;
+  margin-bottom: $spacing-sm;
+}
+
+.subtitle {
+  @include heading-3;
+  color: $white;
+  opacity: 0.95;
+  margin-bottom: $spacing-lg;
+}
+
+.description {
+  @include body-text;
+  font-size: $font-size-lg;
+  color: $white;
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.content {
+  @include section-padding;
+  background-color: $bg-secondary;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-3xl;
+
+  @include respond-to(lg) {
+    grid-template-columns: 1fr 1.5fr;
+  }
+}
+
+.info {
+  @include card;
+}
+
+.infoTitle {
+  @include heading-3;
+  margin-bottom: $spacing-xl;
+  background: linear-gradient(135deg, $primary-light 0%, $primary-color 50%, $primary-dark 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.infoItem {
+  margin-bottom: $spacing-lg;
+
+  strong {
+    display: block;
+    font-weight: $font-weight-semibold;
+    color: $text-primary;
+    margin-bottom: $spacing-xs;
+  }
+
+  a {
+    color: $primary-light;
+    text-decoration: none;
+
+    &:hover {
+      color: $primary-color;
+      text-decoration: underline;
+    }
+  }
+
+  p {
+    @include body-text;
+    margin: 0;
+    color: $text-secondary;
+  }
+}
+
+.formContainer {
+  @include card;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+
+  label {
+    font-weight: $font-weight-medium;
+    color: $text-primary;
+  }
+
+  input,
+  textarea {
+    padding: $spacing-md;
+    border: 2px solid $gray-300;
+    border-radius: $radius-md;
+    font-family: inherit;
+    font-size: $font-size-base;
+    transition: border-color $transition-base;
+    background-color: $white;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-light;
+      box-shadow: 0 0 0 3px rgba(0, 183, 216, 0.1);
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+}
+
+.submitButton {
+  @include button-primary;
+  align-self: flex-start;
+}
+

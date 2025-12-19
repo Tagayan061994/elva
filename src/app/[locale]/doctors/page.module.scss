@@ -1,0 +1,105 @@
+@import '@/styles/variables';
+@import '@/styles/mixins';
+
+.doctorsPage {
+  min-height: 100vh;
+}
+
+.hero {
+  @include section-padding;
+  background: linear-gradient(135deg, $black 0%, #1a1a1a 50%, $black 100%);
+  color: $white;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 183, 216, 0.2);
+}
+
+.container {
+  @include container;
+}
+
+.title {
+  @include heading-1;
+  color: $white;
+  margin-bottom: $spacing-sm;
+}
+
+.subtitle {
+  @include heading-3;
+  color: $white;
+  opacity: 0.95;
+  margin-bottom: $spacing-lg;
+}
+
+.description {
+  @include body-text;
+  font-size: $font-size-lg;
+  color: $white;
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.team {
+  @include section-padding;
+  background-color: $bg-secondary;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-2xl;
+
+  @include respond-to(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond-to(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.doctorCard {
+  @include card;
+  text-align: center;
+  padding: $spacing-2xl;
+}
+
+.avatar {
+  @include flex-center;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto $spacing-lg;
+  background: linear-gradient(135deg, $primary-light 0%, $primary-color 50%, $primary-dark 100%);
+  color: $white;
+  border-radius: $radius-full;
+  font-size: $font-size-4xl;
+  font-weight: $font-weight-bold;
+  font-family: $font-family-heading;
+}
+
+.doctorName {
+  @include heading-3;
+  margin-bottom: $spacing-sm;
+}
+
+.specialization {
+  @include body-text;
+  font-weight: $font-weight-semibold;
+  background: linear-gradient(135deg, $primary-light 0%, $primary-color 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: $spacing-xs;
+}
+
+.experience {
+  @include text-small;
+  color: $text-light;
+  margin-bottom: $spacing-md;
+}
+
+.doctorDescription {
+  @include body-text;
+  margin: 0;
+}
+

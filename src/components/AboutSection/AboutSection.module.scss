@@ -1,0 +1,35 @@
+@import '@/styles/variables';
+@import '@/styles/mixins';
+
+.aboutSection {
+  @include section-padding;
+  background: linear-gradient(135deg, $gray-50 0%, $white 100%);
+}
+
+.container {
+  @include container;
+}
+
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  @include heading-2;
+  margin-bottom: $spacing-lg;
+}
+
+.description {
+  @include body-text;
+  font-size: $font-size-lg;
+  line-height: $line-height-relaxed;
+  margin-bottom: $spacing-2xl;
+  color: $text-secondary;
+}
+
+.ctaButton {
+  @include button-primary;
+}
+

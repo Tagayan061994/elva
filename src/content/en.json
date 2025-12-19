@@ -1,0 +1,190 @@
+{
+  "common": {
+    "clinicName": "ELVA Dental Clinic",
+    "tagline": "Smile wider, smile better!",
+    "menu": {
+      "home": "Home",
+      "about": "About Us",
+      "services": "Services",
+      "works": "Our Works",
+      "doctors": "Doctors",
+      "contact": "Contact Us"
+    },
+    "cta": {
+      "register": "Register now",
+      "contact": "Contact us now",
+      "viewAll": "View All",
+      "learnMore": "Learn More"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Best solutions for you",
+      "subtitle": "You will see a different world of dentistry",
+      "description": "Professional dental care with modern technology and experienced team"
+    },
+    "services": {
+      "title": "Our Services",
+      "subtitle": "Comprehensive dental care",
+      "items": [
+        {
+          "title": "Professional care",
+          "description": "Expert dental care with the latest technology"
+        },
+        {
+          "title": "Ceramic veneers",
+          "description": "Beautiful, natural-looking ceramic veneers for perfect smile"
+        },
+        {
+          "title": "Smile makeover",
+          "description": "Complete smile transformation with advanced techniques"
+        }
+      ]
+    },
+    "works": {
+      "title": "Stories of Success",
+      "subtitle": "Happy patients only",
+      "description": "Have a look at our successful projects and let them speak for us!"
+    },
+    "about": {
+      "title": "Every patient is different, every smile is unique",
+      "description": "Making the patient's dream come true is not just a job for us. It's a lifestyle, a hobby - to revive our patient's smile natural beauty. With latest knowledges in modern dentistry, our experience and applying advanced technologies and equipment - we are able to treat the most complicated cases and make your boldest dreams come true!"
+    }
+  },
+  "about": {
+    "title": "About ELVA Dental Clinic",
+    "mission": {
+      "title": "Our Mission",
+      "description": "To provide exceptional dental care that transforms lives and creates beautiful, healthy smiles."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To be the leading dental clinic recognized for excellence, innovation, and patient-centered care."
+    },
+    "values": [
+      {
+        "title": "Excellence",
+        "description": "We strive for excellence in every aspect of our practice."
+      },
+      {
+        "title": "Innovation",
+        "description": "We embrace the latest technologies and techniques."
+      },
+      {
+        "title": "Compassion",
+        "description": "We care deeply about our patients' well-being and comfort."
+      }
+    ]
+  },
+  "services": {
+    "title": "Our Services",
+    "description": "Comprehensive dental solutions for all your needs",
+    "items": [
+      {
+        "title": "Professional Care",
+        "description": "Complete dental care with modern equipment and experienced professionals.",
+        "features": ["Regular checkups", "Preventive care", "Emergency services"]
+      },
+      {
+        "title": "Ceramic Veneers",
+        "description": "High-quality ceramic veneers that look natural and last for years.",
+        "features": ["Custom design", "Natural appearance", "Long-lasting"]
+      },
+      {
+        "title": "Smile Makeover",
+        "description": "Complete smile transformation using advanced cosmetic dentistry techniques.",
+        "features": ["Full consultation", "Custom treatment plan", "Beautiful results"]
+      },
+      {
+        "title": "Orthodontic Treatment",
+        "description": "Modern orthodontic solutions for perfectly aligned teeth.",
+        "features": ["Traditional braces", "Clear aligners", "Expert consultation"]
+      },
+      {
+        "title": "Gingival Correction",
+        "description": "Professional gum contouring for improved smile aesthetics.",
+        "features": ["Precise treatment", "Minimal discomfort", "Quick recovery"]
+      },
+      {
+        "title": "Dental Implants",
+        "description": "Permanent solution for missing teeth with dental implants.",
+        "features": ["Natural look", "Durable solution", "Expert placement"]
+      }
+    ]
+  },
+  "works": {
+    "title": "Our Works",
+    "subtitle": "Success Stories",
+    "description": "See the amazing transformations we've achieved for our patients",
+    "cases": [
+      {
+        "id": 1,
+        "patientName": "Patient 1",
+        "procedure": "12 ceramic restorations + gingival correction + orthodontic treatment",
+        "price": "€€€",
+        "time": "3 months"
+      },
+      {
+        "id": 2,
+        "patientName": "Patient 2",
+        "procedure": "28 ceramic restorations",
+        "price": "€€",
+        "time": "2 months"
+      },
+      {
+        "id": 3,
+        "patientName": "Patient 3",
+        "procedure": "10 ceramic veneers + gingival correction",
+        "price": "€",
+        "time": "1 month"
+      }
+    ]
+  },
+  "doctors": {
+    "title": "Our Doctors",
+    "subtitle": "Meet Our Expert Team",
+    "description": "Experienced professionals dedicated to your dental health",
+    "team": [
+      {
+        "id": 1,
+        "name": "Dr. John Smith",
+        "specialization": "Prosthodontist",
+        "experience": "15+ years",
+        "description": "Expert in ceramic restorations and smile makeovers"
+      },
+      {
+        "id": 2,
+        "name": "Dr. Sarah Johnson",
+        "specialization": "Orthodontist",
+        "experience": "12+ years",
+        "description": "Specialized in orthodontic treatments and aligners"
+      },
+      {
+        "id": 3,
+        "name": "Dr. Michael Brown",
+        "specialization": "Oral Surgeon",
+        "experience": "10+ years",
+        "description": "Expert in dental implants and surgical procedures"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in Touch",
+    "description": "We're here to help you achieve your perfect smile",
+    "info": {
+      "phone": "+1 (555) 123-4567",
+      "email": "info@elvaclinic.com",
+      "address": "123 Dental Street, City, Country",
+      "hours": "Mon-Fri: 9:00 AM - 6:00 PM"
+    },
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Message",
+      "submit": "Send Message"
+    }
+  }
+}
+

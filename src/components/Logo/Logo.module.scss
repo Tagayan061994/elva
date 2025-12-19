@@ -1,0 +1,138 @@
+@import '@/styles/variables';
+@import '@/styles/mixins';
+
+.logo {
+  display: inline-block;
+  text-decoration: none;
+  transition: transform $transition-base;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.elvaText {
+  display: flex;
+  align-items: center;
+  font-family: $font-family-primary;
+  font-weight: $font-weight-extrabold;
+  font-size: $font-size-2xl;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  position: relative;
+
+  @include respond-to(md) {
+    font-size: $font-size-2xl;
+  }
+
+  @include respond-to(lg) {
+    font-size: $font-size-3xl;
+  }
+}
+
+.letterE,
+.letterL,
+.letterV,
+.letterA {
+  background: linear-gradient(135deg, #0273b3 0%, #005a8f 50%, #023e8a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  display: inline-block;
+}
+
+.letterE {
+  position: relative;
+  overflow: visible;
+}
+
+.eMain {
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(135deg, #0273b3 0%, #005a8f 50%, #023e8a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.eParticles {
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  pointer-events: none;
+  z-index: 1;
+  overflow: visible;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: linear-gradient(135deg, #0273b3 0%, #005a8f 100%);
+  border-radius: 1px;
+  opacity: 0;
+  animation: particleFloat 2s ease-in-out infinite;
+  animation-delay: var(--delay);
+  left: 50%;
+  top: 50%;
+  transform: translate(calc(50% + var(--x)), calc(50% + var(--y)));
+}
+
+@keyframes particleFloat {
+  0% {
+    opacity: 0;
+    transform: translate(calc(50% + var(--x)), calc(50% + var(--y))) scale(0);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translate(calc(50% + var(--x) * 1.5), calc(50% + var(--y) * 1.5)) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(50% + var(--x) * 2), calc(50% + var(--y) * 2)) scale(0.5);
+  }
+}
+
+.tagline {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+  font-family: $font-family-primary;
+  font-size: 9px;
+  font-weight: $font-weight-light;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #0273b3;
+
+  @include respond-to(md) {
+    font-size: $font-size-xs;
+    gap: $spacing-sm;
+  }
+}
+
+.line {
+  width: 15px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, #0273b3 50%, transparent 100%);
+
+  @include respond-to(md) {
+    width: 20px;
+  }
+}
+
+.text {
+  color: #0273b3;
+  opacity: 0.9;
+}
+

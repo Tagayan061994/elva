@@ -1,0 +1,91 @@
+@import '@/styles/variables';
+@import '@/styles/mixins';
+
+.aboutPage {
+  min-height: 100vh;
+}
+
+.hero {
+  @include section-padding;
+  background: linear-gradient(135deg, $black 0%, #1a1a1a 50%, $black 100%);
+  color: $white;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 183, 216, 0.2);
+}
+
+.container {
+  @include container;
+}
+
+.title {
+  @include heading-1;
+  color: $white;
+}
+
+.mission,
+.vision {
+  @include section-padding;
+  background-color: $bg-primary;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sectionTitle {
+  @include heading-2;
+  margin-bottom: $spacing-lg;
+}
+
+.sectionDescription {
+  @include body-text;
+  font-size: $font-size-lg;
+  line-height: $line-height-relaxed;
+}
+
+.vision {
+  background-color: $bg-secondary;
+}
+
+.values {
+  @include section-padding;
+  background-color: $bg-primary;
+}
+
+.valuesTitle {
+  @include heading-2;
+  text-align: center;
+  margin-bottom: $spacing-3xl;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-xl;
+
+  @include respond-to(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.valueCard {
+  @include card;
+  text-align: center;
+}
+
+.valueTitle {
+  @include heading-4;
+  background: linear-gradient(135deg, $primary-light 0%, $primary-color 50%, $primary-dark 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: $spacing-md;
+}
+
+.valueDescription {
+  @include body-text;
+  margin: 0;
+}
+

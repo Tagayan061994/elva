@@ -1,0 +1,81 @@
+@import '@/styles/variables';
+@import '@/styles/mixins';
+
+.footer {
+  background-color: $black;
+  color: $text-white;
+  padding: $spacing-3xl 0 $spacing-xl;
+  margin-top: $spacing-4xl;
+  border-top: 1px solid rgba(0, 183, 216, 0.2);
+}
+
+.container {
+  @include container;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-2xl;
+  margin-bottom: $spacing-2xl;
+
+  @include respond-to(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.brand {
+  .tagline {
+    color: $gray-300;
+    font-size: $font-size-lg;
+    margin-top: $spacing-md;
+    text-align: center;
+  }
+}
+
+.nav,
+.contact {
+  .navTitle,
+  .contactTitle {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-semibold;
+    margin-bottom: $spacing-md;
+    color: $white;
+  }
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+
+  a {
+    color: $gray-300;
+    transition: color $transition-base;
+
+    &:hover {
+      color: $primary-light;
+    }
+  }
+}
+
+.contact {
+  p {
+    color: $gray-300;
+    margin-bottom: $spacing-sm;
+    font-size: $font-size-sm;
+  }
+}
+
+.bottom {
+  padding-top: $spacing-xl;
+  border-top: 1px solid $gray-700;
+  text-align: center;
+
+  p {
+    color: $gray-400;
+    font-size: $font-size-sm;
+    margin: 0;
+  }
+}
+

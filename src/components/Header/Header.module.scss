@@ -1,0 +1,126 @@
+@import '@/styles/variables';
+@import '@/styles/mixins';
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: $z-sticky;
+  background-color: $white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid $gray-200;
+}
+
+.container {
+  @include container;
+  @include flex-between;
+  padding-top: $spacing-sm;
+  padding-bottom: $spacing-sm;
+  min-height: 60px;
+  align-items: center;
+}
+
+// Logo styles are now in Logo component
+
+.nav {
+  display: none;
+  gap: $spacing-sm;
+  align-items: center;
+
+  @include respond-to(md) {
+    display: flex;
+  }
+}
+
+.navOpen {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: $white;
+  box-shadow: $shadow-lg;
+  padding: $spacing-md;
+  gap: $spacing-sm;
+  border-top: 1px solid $gray-200;
+
+  @include respond-to(md) {
+    position: static;
+    flex-direction: row;
+    box-shadow: none;
+    padding: 0;
+    border-top: none;
+    gap: $spacing-sm;
+  }
+}
+
+.navLink {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  color: $text-primary;
+  text-decoration: none;
+  padding: $spacing-xs $spacing-sm;
+  border-radius: $radius-md;
+  transition: all $transition-base;
+  white-space: nowrap;
+
+  &:hover {
+    color: $primary-color;
+    background-color: $gray-50;
+  }
+
+  &.active {
+    color: $white;
+    background-color: $primary-color;
+    padding: $spacing-xs $spacing-sm;
+  }
+}
+
+.actions {
+  @include flex-center;
+  gap: $spacing-sm;
+  align-items: center;
+}
+
+.ctaButton {
+  @include button-primary;
+  display: none;
+  padding: $spacing-xs $spacing-sm;
+  font-size: $font-size-xs;
+  white-space: nowrap;
+  font-weight: $font-weight-medium;
+
+  @include respond-to(sm) {
+    display: inline-flex;
+  }
+}
+
+.menuToggle {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: $spacing-sm;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+
+  @include respond-to(md) {
+    display: none;
+  }
+
+  span {
+    width: 100%;
+    height: 2px;
+    background-color: $text-primary;
+    border-radius: $radius-sm;
+    transition: all $transition-base;
+  }
+
+  &:hover span {
+    background-color: $primary-color;
+  }
+}
+

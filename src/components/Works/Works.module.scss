@@ -1,0 +1,89 @@
+@import '@/styles/variables';
+@import '@/styles/mixins';
+
+.works {
+  @include section-padding;
+  background-color: $bg-primary;
+}
+
+.container {
+  @include container;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: $spacing-3xl;
+}
+
+.title {
+  @include heading-2;
+  margin-bottom: $spacing-sm;
+}
+
+.subtitle {
+  @include heading-3;
+  color: $primary-color;
+  margin-bottom: $spacing-md;
+}
+
+.description {
+  @include body-text;
+  font-size: $font-size-lg;
+  color: $text-secondary;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-xl;
+  margin-bottom: $spacing-3xl;
+
+  @include respond-to(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond-to(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  @include card;
+  padding: 0;
+  overflow: hidden;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(135deg, $gray-200 0%, $gray-300 100%);
+  @include flex-center;
+  color: $text-light;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-medium;
+}
+
+.content {
+  padding: $spacing-xl;
+}
+
+.cardTitle {
+  @include heading-4;
+  margin-bottom: $spacing-sm;
+}
+
+.cardDescription {
+  @include body-text;
+  margin: 0;
+}
+
+.footer {
+  text-align: center;
+}
+
+.viewAllButton {
+  @include button-primary;
+}
+

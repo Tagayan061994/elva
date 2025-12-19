@@ -1,0 +1,108 @@
+@import '@/styles/variables';
+@import '@/styles/mixins';
+
+.hero {
+  @include section-padding;
+  background: linear-gradient(135deg, $black 0%, #1a1a1a 50%, $black 100%);
+  color: $white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(0, 183, 216, 0.2);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.1;
+  }
+}
+
+.container {
+  @include container;
+  position: relative;
+  z-index: 1;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  @include heading-1;
+  color: $white;
+  margin-bottom: $spacing-md;
+  font-size: $font-size-4xl;
+
+  @include respond-to(md) {
+    font-size: $font-size-5xl;
+  }
+
+  @include respond-to(lg) {
+    font-size: $font-size-6xl;
+  }
+}
+
+.subtitle {
+  @include heading-2;
+  color: $white;
+  margin-bottom: $spacing-lg;
+  font-size: $font-size-2xl;
+  opacity: 0.95;
+
+  @include respond-to(md) {
+    font-size: $font-size-3xl;
+  }
+}
+
+.description {
+  @include body-text;
+  color: $white;
+  font-size: $font-size-lg;
+  margin-bottom: $spacing-2xl;
+  opacity: 0.9;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include respond-to(md) {
+    font-size: $font-size-xl;
+  }
+}
+
+.actions {
+  @include flex-center;
+  gap: $spacing-md;
+  flex-wrap: wrap;
+}
+
+.primaryButton {
+  @include button-primary;
+  background: linear-gradient(135deg, $primary-light 0%, $primary-color 50%, $primary-dark 100%);
+  color: $white;
+  border: none;
+
+  &:hover {
+    background: linear-gradient(135deg, #48cae4 0%, $primary-light 50%, $primary-color 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 183, 216, 0.4);
+  }
+}
+
+.secondaryButton {
+  @include button-outline;
+  border-color: $primary-light;
+  color: $primary-light;
+
+  &:hover {
+    background-color: $primary-light;
+    color: $black;
+    border-color: $primary-light;
+  }
+}
+
