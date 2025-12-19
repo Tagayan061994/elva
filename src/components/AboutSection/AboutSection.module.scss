@@ -50,3 +50,31 @@
   @include button-primary;
 }
 
+.floatingElement {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  z-index: 0;
+  pointer-events: none;
+
+  @media screen and (max-width: 768px) {
+    top: 15%;
+    left: 5%;
+  }
+}
+
+.floatingCircle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(2, 115, 179, 0.18) 0%, rgba(0, 183, 216, 0.28) 100%);
+  border: 2px solid rgba(2, 115, 179, 0.25);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(2, 115, 179, 0.18);
+
+  @media screen and (max-width: 768px) {
+    width: 85px;
+    height: 85px;
+  }
+}
+

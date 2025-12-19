@@ -2,108 +2,109 @@
 @import '@/styles/mixins';
 
 .hero {
-  @include section-padding;
-  background: linear-gradient(135deg, $black 0%, #1a1a1a 50%, $black 100%);
-  color: $white;
-  text-align: center;
   position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
-  border-bottom: 1px solid rgba(0, 183, 216, 0.2);
+  background: linear-gradient(135deg, $white 0%, $gray-50 100%);
+}
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    opacity: 0.1;
-    z-index: 1;
+.threeBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+.floatingElement {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  z-index: 1;
+  pointer-events: none;
+
+  @media screen and (max-width: 768px) {
+    top: 15%;
+    right: 5%;
+  }
+}
+
+.floatingCircle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(2, 115, 179, 0.2) 0%, rgba(0, 183, 216, 0.3) 100%);
+  border: 2px solid rgba(2, 115, 179, 0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(2, 115, 179, 0.2);
+
+  @media screen and (max-width: 768px) {
+    width: 80px;
+    height: 80px;
   }
 }
 
 .container {
   @include container;
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 .content {
+  text-align: center;
   max-width: 800px;
   margin: 0 auto;
 }
 
+.titleWrapper,
+.subtitleWrapper,
+.descriptionWrapper {
+  display: block;
+}
+
 .title {
   @include heading-1;
-  color: $white;
-  margin-bottom: $spacing-md;
-  font-size: $font-size-4xl;
-
-  @include respond-to(md) {
-    font-size: $font-size-5xl;
-  }
-
-  @include respond-to(lg) {
-    font-size: $font-size-6xl;
-  }
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, $primary-color 0%, $primary-light 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .subtitle {
   @include heading-2;
-  color: $white;
-  margin-bottom: $spacing-lg;
-  font-size: $font-size-2xl;
-  opacity: 0.95;
-
-  @include respond-to(md) {
-    font-size: $font-size-3xl;
-  }
+  margin-bottom: 1rem;
+  color: $black;
 }
 
 .description {
   @include body-text;
-  color: $white;
   font-size: $font-size-lg;
-  margin-bottom: $spacing-2xl;
-  opacity: 0.9;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-
-  @include respond-to(md) {
-    font-size: $font-size-xl;
-  }
+  margin-bottom: 2.5rem;
+  color: $gray-700;
+  line-height: 1.8;
 }
 
 .actions {
-  @include flex-center;
-  gap: $spacing-md;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
   flex-wrap: wrap;
+}
+
+.primaryButton,
+.secondaryButton {
+  @include button-base;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .primaryButton {
   @include button-primary;
-  background: linear-gradient(135deg, $primary-light 0%, $primary-color 50%, $primary-dark 100%);
-  color: $white;
-  border: none;
-
-  &:hover {
-    background: linear-gradient(135deg, #48cae4 0%, $primary-light 50%, $primary-color 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 183, 216, 0.4);
-  }
 }
 
 .secondaryButton {
-  @include button-outline;
-  border-color: $primary-light;
-  color: $primary-light;
-
-  &:hover {
-    background-color: $primary-light;
-    color: $black;
-    border-color: $primary-light;
-  }
+  @include button-secondary;
 }
-

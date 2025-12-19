@@ -4,6 +4,8 @@
 .works {
   @include section-padding;
   background-color: $bg-primary;
+  position: relative;
+  overflow: hidden;
 }
 
 .container {
@@ -81,11 +83,68 @@
   margin: 0;
 }
 
+.procedure {
+  @include body-text;
+  font-size: $font-size-base;
+  color: $text-secondary;
+  margin-bottom: $spacing-md;
+  line-height: 1.6;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: $spacing-md;
+  padding-top: $spacing-md;
+  border-top: 1px solid $gray-200;
+}
+
+.price {
+  font-weight: $font-weight-semibold;
+  color: $primary-color;
+  font-size: $font-size-lg;
+}
+
+.time {
+  @include body-text;
+  font-size: $font-size-sm;
+  color: $text-light;
+}
+
 .footer {
   text-align: center;
 }
 
 .viewAllButton {
   @include button-primary;
+}
+
+.floatingElement {
+  position: absolute;
+  bottom: 15%;
+  left: 8%;
+  z-index: 0;
+  pointer-events: none;
+
+  @media screen and (max-width: 768px) {
+    bottom: 10%;
+    left: 5%;
+  }
+}
+
+.floatingCircle {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(2, 115, 179, 0.12) 0%, rgba(0, 183, 216, 0.22) 100%);
+  border: 2px solid rgba(2, 115, 179, 0.18);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(2, 115, 179, 0.12);
+
+  @media screen and (max-width: 768px) {
+    width: 75px;
+    height: 75px;
+  }
 }
 

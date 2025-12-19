@@ -26,7 +26,7 @@ export default function HomePage({
     <div className={styles.homePage}>
       <Hero content={content.home.hero} cta={content.common.cta} />
       <Services content={content.home.services} />
-      <Works content={content.home.works} />
+      <Works content={{ ...content.home.works, cases: content.works.cases || [] }} />
       <AboutSection content={content.home.about} cta={content.common.cta} />
     </div>
   );

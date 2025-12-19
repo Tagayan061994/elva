@@ -1,8 +1,7 @@
 import { Inter, Playfair_Display } from 'next/font/google';
 import type { Metadata } from 'next';
 import '@/styles/globals.scss';
-import Header from '@/components/Header/Header';
-import Footer from '@/components/Footer/Footer';
+import LayoutWrapper from '@/components/LayoutWrapper/LayoutWrapper';
 import { getContent, type Locale } from '@/lib/content';
 
 const inter = Inter({
@@ -45,13 +44,6 @@ export default function LocaleLayout({
   params: { locale: Locale };
 }) {
   const locale = params.locale;
-  const lang = locale === 'arm' ? 'hy' : locale;
 
-  return (
-    <>
-      <Header locale={locale} />
-      <main>{children}</main>
-      <Footer locale={locale} />
-    </>
-  );
+  return <LayoutWrapper locale={locale}>{children}</LayoutWrapper>;
 }

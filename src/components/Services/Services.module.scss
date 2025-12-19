@@ -4,6 +4,8 @@
 .services {
   @include section-padding;
   background-color: $bg-secondary;
+  position: relative;
+  overflow: hidden;
 }
 
 .container {
@@ -67,5 +69,33 @@
 .cardDescription {
   @include body-text;
   margin: 0;
+}
+
+.floatingElement {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  z-index: 0;
+  pointer-events: none;
+
+  @media screen and (max-width: 768px) {
+    top: 5%;
+    right: 2%;
+  }
+}
+
+.floatingCircle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(2, 115, 179, 0.15) 0%, rgba(0, 183, 216, 0.25) 100%);
+  border: 2px solid rgba(2, 115, 179, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(2, 115, 179, 0.15);
+
+  @media screen and (max-width: 768px) {
+    width: 70px;
+    height: 70px;
+  }
 }
 

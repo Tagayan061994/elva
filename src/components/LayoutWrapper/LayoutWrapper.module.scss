@@ -1,0 +1,13 @@
+@import '@/styles/variables';
+
+.layoutWrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.motionPathElement {
+  will-change: transform;
+}
+
