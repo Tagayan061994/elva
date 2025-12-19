@@ -53,6 +53,8 @@
   @include card;
   padding: 0;
   overflow: hidden;
+  cursor: pointer;
+  transform-origin: center;
 }
 
 .imagePlaceholder {

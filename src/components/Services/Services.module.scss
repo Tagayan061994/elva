@@ -44,6 +44,8 @@
   @include card;
   text-align: center;
   padding: $spacing-2xl;
+  cursor: pointer;
+  transform-origin: center;
 }
 
 .icon {
