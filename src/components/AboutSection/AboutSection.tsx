@@ -19,7 +19,9 @@ interface AboutSectionProps {
 export default function AboutSection({ content, cta }: AboutSectionProps) {
   return (
     <section className={styles.aboutSection}>
-      <Parallax speed={0.2} className={styles.parallaxBg} />
+      <Parallax speed={0.2} className={styles.parallaxBg}>
+        <div></div>
+      </Parallax>
       <div className={styles.container}>
         <div className={styles.content}>
           <FadeIn delay={0.2}>

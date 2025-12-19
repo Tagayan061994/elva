@@ -1,0 +1,41 @@
+🚀 DEPLOY TO VERCEL VIA CLI - SIMPLE STEPS
+==========================================
+
+STEP 1: Open Terminal
+---------------------
+Open Terminal app on your Mac
+
+STEP 2: Navigate to Project
+----------------------------
+Copy and paste this command:
+cd /Users/hakobtagayan/Desktop/elva
+
+STEP 3: Deploy to Vercel
+-------------------------
+Copy and paste this command:
+npx vercel
+
+STEP 4: Follow the Prompts
+----------------------------
+When asked:
+1. "Set up and deploy?" → Type: Y (then press Enter)
+2. "Which scope?" → Use arrow keys to select, press Enter
+3. "Link to existing project?" → Type: N (then press Enter)
+4. "What's your project's name?" → Just press Enter
+5. "In which directory is your code located?" → Just press Enter
+6. "Want to override the settings?" → Type: N (then press Enter)
+
+STEP 5: Wait
+-------------
+Wait 1-2 minutes for deployment to complete
+
+STEP 6: Get Your URL
+---------------------
+You'll see a URL like:
+✅ Production: https://elva-clinic-xxxxx.vercel.app
+
+Copy this URL - that's your random test URL!
+
+==========================================
+That's it! Your site will be live in ~2 minutes.
+

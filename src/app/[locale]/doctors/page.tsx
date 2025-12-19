@@ -31,7 +31,7 @@ export default function DoctorsPage({
       <section className={styles.team}>
         <div className={styles.container}>
           <div className={styles.grid}>
-            {content.doctors.team.map((doctor) => (
+            {(content.doctors.team || []).map((doctor) => (
               <div key={doctor.id} className={styles.doctorCard}>
                 <div className={styles.avatar}>
                   <span>{doctor.name.charAt(0)}</span>

@@ -21,7 +21,9 @@ interface HeroProps {
 export default function Hero({ content, cta }: HeroProps) {
   return (
     <section className={styles.hero}>
-      <Parallax speed={0.3} className={styles.parallaxBg} />
+      <Parallax speed={0.3} className={styles.parallaxBg}>
+        <div></div>
+      </Parallax>
       <div className={styles.container}>
         <div className={styles.content}>
           <FadeIn delay={0.2}>
